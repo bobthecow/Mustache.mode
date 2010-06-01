@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Mustache";
+CFBundleShortVersionString = "0.1";
+CFBundleGetInfoString = "Mustache Mode 0.1";
+NSHumanReadableCopyright = "(c) Justin Hileman";

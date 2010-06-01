@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <template>cheatsheet.mustache</template>
+  <recognition>
+    <extension>ms</extension>
+    <extension>mustache</extension>
+    <extension>stache</extension>
+  </recognition>
+</settings>
