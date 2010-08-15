@@ -3,6 +3,7 @@
   <template>cheatsheet.mustache</template>
   <recognition>
     <extension>ms</extension>
+    <extension>mstache</extension>
     <extension>mustache</extension>
     <extension>stache</extension>
   </recognition>

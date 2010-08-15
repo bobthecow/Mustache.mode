@@ -20,7 +20,7 @@ Usage
 
  1. Install.
 
- 2. Open a file with a `.ms`, `.mustache` or `.stache` extension in Coda or SubEthaEdit.
+ 2. Open a file with a `.ms`, `.mstache`, `.mustache` or `.stache` extension in Coda or SubEthaEdit.
 
  3. ?
 
