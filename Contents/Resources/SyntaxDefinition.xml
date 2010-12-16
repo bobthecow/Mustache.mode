@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <syntax>
 	<head>
-		<name>Mustache Syntax</name>
+		<name>Mustache</name>
 		<autocompleteoptions use-spelling-dictionary="yes"/>
 		<charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@]]></charsintokens>
 	</head>
