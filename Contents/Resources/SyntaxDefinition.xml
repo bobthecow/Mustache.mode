@@ -40,12 +40,29 @@
 			<end><regex>(?&lt;!\{\{)&gt;</regex></end>
 
 			<state id="Strings in HTML Tags" type="string" color="#1A1AA6" useforautocomplete="no">
-				<begin>
-					<regex>"</regex>
-				</begin>
-				<end>
-					<regex>"</regex>
-				</end>
+				<begin><regex>"</regex></begin>
+				<end><regex>"</regex></end>
+
+				<keywords id="Sections in strings" color="#CC0000">
+					<regex>(\{\{[#^/][^\}]*\}\})</regex>
+				</keywords>
+
+				<keywords id="Unescaped Variables in strings" color="#825900">
+					<regex>(\{\{&amp;[^\}]*\}\})</regex>
+					<regex>(\{\{\{[^\}]*\}\}\})</regex>
+				</keywords>
+
+				<keywords id="Partials in strings" color="#003369">
+					<regex>(\{\{&gt;[^\}]*\}\})</regex>
+				</keywords>
+
+				<keywords id="Comments in strings" color="#236E25">
+					<regex>(\{\{![^\}]*\}\})</regex>
+				</keywords>
+
+				<keywords id="Variables in strings" color="#825900">
+					<regex>(\{\{[^#^/\{&amp;!&gt;%][^\}]*\}\})</regex>
+				</keywords>
 			</state>
 
 			<keywords id="Attributes in HTML Tags" color="#994500" useforautocomplete="no">
