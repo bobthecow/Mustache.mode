@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>SEEMode.com.justinhileman.Mustache</string>
+	<string>SEEMode.Mustache</string>
 	<key>CFBundleName</key>
 	<string>Markdown</string>
     <key>CFBundleShortVersionString</key>
