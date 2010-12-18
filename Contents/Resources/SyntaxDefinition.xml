@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <syntax>
 	<head>
-		<name>Markdown Syntax</name>
-		<autocompleteoptions use-spelling-dictionary="yes"/>
+		<name>Mustache</name>
+		<autocompleteoptions use-spelling-dictionary="yes" usespellchecking="yes"/>
 		<charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@]]></charsintokens>
 	</head>
 	<states>
-		<default id="Base" color="#000" usesymbolsfrommode="HTML" useautocompletefrommode="HTML">
+		<default id="Base" color="#000" usesymbolsfrommode="HTML" useautocompletefrommode="HTML" usespellchecking="yes">
 			<keywords id="Sections" color="#CC0000">
 				<regex>(\{\{[#^/][^\}]*\}\})</regex>
 			</keywords>
@@ -24,7 +24,7 @@
 				<regex>(\{\{&gt;[^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Comments" color="#236E25">
+			<keywords id="Comments" color="#236E25" font-style="italic">
 				<regex>(\{\{![^\}]*\}\})</regex>
 			</keywords>
 
@@ -40,12 +40,29 @@
 			<end><regex>(?&lt;!\{\{)&gt;</regex></end>
 
 			<state id="Strings in HTML Tags" type="string" color="#1A1AA6" useforautocomplete="no">
-				<begin>
-					<regex>"</regex>
-				</begin>
-				<end>
-					<regex>"</regex>
-				</end>
+				<begin><regex>"</regex></begin>
+				<end><regex>"</regex></end>
+
+				<keywords id="Sections in strings" color="#CC0000">
+					<regex>(\{\{[#^/][^\}]*\}\})</regex>
+				</keywords>
+
+				<keywords id="Unescaped Variables in strings" color="#825900">
+					<regex>(\{\{&amp;[^\}]*\}\})</regex>
+					<regex>(\{\{\{[^\}]*\}\}\})</regex>
+				</keywords>
+
+				<keywords id="Partials in strings" color="#003369">
+					<regex>(\{\{&gt;[^\}]*\}\})</regex>
+				</keywords>
+
+				<keywords id="Comments in strings" color="#236E25" font-style="italic">
+					<regex>(\{\{![^\}]*\}\})</regex>
+				</keywords>
+
+				<keywords id="Variables in strings" color="#825900">
+					<regex>(\{\{[^#^/\{&amp;!&gt;%][^\}]*\}\})</regex>
+				</keywords>
 			</state>
 
 			<keywords id="Attributes in HTML Tags" color="#994500" useforautocomplete="no">
@@ -65,7 +82,7 @@
 				<regex>(\{\{&gt;[^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Comments in HTML Tags" color="#236E25">
+			<keywords id="Comments in HTML Tags" color="#236E25" font-style="italic">
 				<regex>(\{\{![^\}]*\}\})</regex>
 			</keywords>
 
