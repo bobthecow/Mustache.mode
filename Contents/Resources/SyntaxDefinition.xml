@@ -7,86 +7,86 @@
 	</head>
 	<states>
 		<default id="Base" color="#000" usesymbolsfrommode="HTML" useautocompletefrommode="HTML" usespellchecking="yes">
-			<keywords id="Sections" color="#CC0000">
+			<keywords id="Sections" color="#CC0000" scope="support.section.mustache">
 				<regex>(\{\{[#^/][^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Pragmas" color="#236E25">
+			<keywords id="Pragmas" color="#236E25" scope="markup.processing.pragma.mustache">
 				<regex>(\{\{%[^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Unescaped Variables" color="#825900">
+			<keywords id="Unescaped Variables" color="#825900" scope="language.variable.mustache">
 				<regex>(\{\{&amp;[^\}]*\}\})</regex>
 				<regex>(\{\{\{[^\}]*\}\}\})</regex>
 			</keywords>
 
-			<keywords id="Partials" color="#003369">
+			<keywords id="Partials" color="#003369" scope="language.function.partial.mustache">
 				<regex>(\{\{&gt;[^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Comments" color="#236E25" font-style="italic">
+			<keywords id="Comments" color="#236E25" font-style="italic" scope="comment.mustache">
 				<regex>(\{\{![^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Variables" color="#825900">
+			<keywords id="Variables" color="#825900" scope="language.variable.mustache">
 				<regex>(\{\{[^#^/\{&amp;!&gt;%][^\}]*\}\})</regex>
 			</keywords>
 
 			<import state="HTML Tags" />
 		</default>
 
-		<state id="HTML Tags" color="#881280" font-style="normal">
+		<state id="HTML Tags" color="#881280" font-style="normal" scope="markup.tag">
 			<begin><regex>&lt;</regex></begin>
 			<end><regex>(?&lt;!\{\{)&gt;</regex></end>
 
-			<state id="Strings in HTML Tags" type="string" color="#1A1AA6" useforautocomplete="no">
+			<state id="Strings in HTML Tags" type="string" color="#1A1AA6" useforautocomplete="no" scope="markup.tag.attribute.value">
 				<begin><regex>"</regex></begin>
 				<end><regex>"</regex></end>
 
-				<keywords id="Sections in strings" color="#CC0000">
+				<keywords id="Sections in strings" color="#CC0000" scope="support.section.mustache">
 					<regex>(\{\{[#^/][^\}]*\}\})</regex>
 				</keywords>
 
-				<keywords id="Unescaped Variables in strings" color="#825900">
+				<keywords id="Unescaped Variables in strings" color="#825900" scope="language.variable.mustache">
 					<regex>(\{\{&amp;[^\}]*\}\})</regex>
 					<regex>(\{\{\{[^\}]*\}\}\})</regex>
 				</keywords>
 
-				<keywords id="Partials in strings" color="#003369">
+				<keywords id="Partials in strings" color="#003369" scope="language.function.partial.mustache">
 					<regex>(\{\{&gt;[^\}]*\}\})</regex>
 				</keywords>
 
-				<keywords id="Comments in strings" color="#236E25" font-style="italic">
+				<keywords id="Comments in strings" color="#236E25" font-style="italic" scope="comment.mustache">
 					<regex>(\{\{![^\}]*\}\})</regex>
 				</keywords>
 
-				<keywords id="Variables in strings" color="#825900">
+				<keywords id="Variables in strings" color="#825900" scope="language.variable.mustache">
 					<regex>(\{\{[^#^/\{&amp;!&gt;%][^\}]*\}\})</regex>
 				</keywords>
 			</state>
 
-			<keywords id="Attributes in HTML Tags" color="#994500" useforautocomplete="no">
+			<keywords id="Attributes in HTML Tags" color="#994500" useforautocomplete="no" scope="markup.tag.attribute.name">
 				<regex>([\w-]*)(?=[ \t]*=)</regex>
 			</keywords>
 
-			<keywords id="Sections in HTML Tags" color="#CC0000">
+			<keywords id="Sections in HTML Tags" color="#CC0000" scope="support.section.mustache">
 				<regex>(\{\{[#^/][^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Unescaped Variables in HTML Tags" color="#825900">
+			<keywords id="Unescaped Variables in HTML Tags" color="#825900" scope="language.variable.mustache">
 				<regex>(\{\{&amp;[^\}]*\}\})</regex>
 				<regex>(\{\{\{[^\}]*\}\}\})</regex>
 			</keywords>
 
-			<keywords id="Partials in HTML Tags" color="#003369">
+			<keywords id="Partials in HTML Tags" color="#003369" scope="language.function.partial.mustache">
 				<regex>(\{\{&gt;[^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Comments in HTML Tags" color="#236E25" font-style="italic">
+			<keywords id="Comments in HTML Tags" color="#236E25" font-style="italic" scope="comment.mustache">
 				<regex>(\{\{![^\}]*\}\})</regex>
 			</keywords>
 
-			<keywords id="Variables in HTML Tags" color="#825900">
+			<keywords id="Variables in HTML Tags" color="#825900" scope="language.variable.mustache">
 				<regex>(\{\{[^#^/\{&amp;!&gt;%][^\}]*\}\})</regex>
 			</keywords>
 
