@@ -6,7 +6,7 @@
     <extension>mstache</extension>
     <extension>mustache</extension>
     <extension>stache</extension>
-    <extension>hbs></extension>
+    <extension>hbs</extension>
     <extension>handlebars</extension>
   </recognition>
 </settings>
