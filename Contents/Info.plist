@@ -5,11 +5,11 @@
 	<key>CFBundleIdentifier</key>
 	<string>SEEMode.Mustache</string>
 	<key>CFBundleName</key>
-	<string>Markdown</string>
+	<string>Mustache</string>
     <key>CFBundleShortVersionString</key>
-	<string>0.1</string>
+	<string>0.1.1</string>
 	<key>CFBundleVersion</key>
-	<string>0.1</string>
+	<string>0.1.1</string>
     <key>CFBundleGetInfoString</key>
 	<string>(c) Justin Hileman</string>
 	<key>CFBundlePackageType</key>
